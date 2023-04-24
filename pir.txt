@@ -1,0 +1,34 @@
+int Ledpin=13;
+int inputpin=8;
+int pirstate=LOW;
+int val=0;
+
+void setup(){
+    pinMode(Ledpin,OUTPUT);
+    pinMode(inputpin,INPUT);
+    Serial.begin(9600);
+}
+void loop(){
+    val=digitalRead(inputpin);
+    if(val==HIGH)
+    {
+        digitalWrite(Ledpin,HIGH);
+        if(pirstate=HIGH);
+        {
+            Serial.println("motion detected");
+          	delay(500);
+            pirstate=HIGH;
+        }
+
+    }
+    else
+    {
+        digitalWrite(Ledpin,LOW);
+        if(pirstate==HIGH);
+        {
+            Serial.println("motion ended");
+          	delay(500);
+            pirstate=LOW;
+        }
+    }
+}

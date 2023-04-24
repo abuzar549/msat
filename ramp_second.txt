@@ -1,0 +1,15 @@
+clc;
+clear all;
+wn = 5;
+zeta = 0.2;
+ramp = tf([1 0], [1]);
+
+num = wn^2;
+den = [1 2*zeta*wn wn^2];
+sys = tf(num, den);
+
+figure;
+step(sys*ramp);
+xlabel('Time');
+ylabel('Output');
+title('Ramp Response of Second-order System');

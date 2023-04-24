@@ -1,0 +1,8 @@
+clc 
+clear all
+t = 0:0.1:10;
+alpha =1 ;
+input = alpha*t;
+transferfunction = tf(1,[1 1]);
+y= lsim(transferfunction,input,t);
+plot(t,y)

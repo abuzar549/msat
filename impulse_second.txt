@@ -1,0 +1,7 @@
+clc
+clear all
+wn = input('enter frequency')
+zeta = input('enter damping factor')
+num=[wn^2]
+den=[1 2*zeta*wn wn^2]
+impulse(num,den)
