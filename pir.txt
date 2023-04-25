@@ -13,7 +13,7 @@ void loop(){
     if(val==HIGH)
     {
         digitalWrite(Ledpin,HIGH);
-        if(pirstate=HIGH);
+        if(pirstate==LOW);
         {
             Serial.println("motion detected");
           	delay(500);
